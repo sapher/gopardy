@@ -1,0 +1,14 @@
+build:
+  binary: gopardy
+  main: ./cmd/gopardy
+  goos:
+    - darwin
+  goarch:
+    - amd64
+  ignore:
+    - goos: darwin
+      goarch: 386
+  env:
+    - CGO_ENABLED=0
+  ldflags:
+    - -s -w
